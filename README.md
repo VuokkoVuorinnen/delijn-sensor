@@ -10,7 +10,7 @@ This code can be used to add a custom sensor for De Lijn public transport of Fla
 | ---- | ---- | ------- | -----------
 | platform | string | **Required** | `delijn`
 | sub_key | string | **Required** | The subscription key generated in a developer account at data.delijn.be.
-| nextpassages | object | **Required** | List of stops to display next passages of.
+| nextpassage | object | **Required** | List of stops to display next passages of.
 
 ## nextpassages object
 
@@ -23,13 +23,14 @@ This code can be used to add a custom sensor for De Lijn public transport of Fla
 
 ### Step 1
 
-Install `delijn-sensor` by copying `delijn.py` from this repo to `<config directory>/custom_components/sensor/delijn.py` of your Home Assistant instance.
+Install `delijn-sensor` by copying `delijn.py` from this repo to `<config directory>/custom_components/delijn/sensor.py` of your Home Assistant instance. Also make an empty `__init__.py` file in this directory.
 
 **Example:**
 
 ```bash
 wget https://github.com/bollewolle/delijn-sensor/raw/master/delijn.py
-mv delijn.py ~/.homeassistant//custom_components/sensor/
+mv delijn.py ~/.homeassistant//custom_components/delijn/sensor.py
+touch ~/.homeassistant//custom_components/delijn/__init__.py
 ```
 
 ### Step 2
